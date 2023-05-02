@@ -1,0 +1,40 @@
+Local Government Area (LGA) Summary
+
+# Calculate the total number of unique schools
+total_schools = schools_df['School ID'].nunique()
+
+# Calculate the total number of students
+total_students = students_df['Student ID'].nunique()
+
+# Calculate the total budget
+total_budget = schools_df['budget'].sum()
+
+# Calculate the average maths score
+avg_math_score = students_df['math_score'].mean()
+
+# Calculate the average reading score
+avg_reading_score = students_df['reading_score'].mean()
+
+# Calculate the percentage of students who passed maths
+students_df['pass_math'] = students_df['math_score'] >= 70
+perc_pass_math = students_df['pass_math'].mean() * 100
+
+# Calculate the percentage of students who passed reading
+students_df['pass_reading'] = students_df['reading_score'] >= 70
+perc_pass_reading = students_df['pass_reading'].mean() * 100
+
+# Calculate the percentage of students who passed both maths and reading
+students_df['pass_both'] = (students_df['math_score'] >= 70) & (students_df['reading_score'] >= 70)
+perc_pass_both = students_df['pass_both'].mean() * 100
+
+# Create a new dataframe for the above calculations
+area_summary = pd.DataFrame({
+    'Total Schools': [total_schools],
+    'Total Students': [total_students],
+    'Total Budget': [total_budget],
+    'Average Math Score': [avg_math_score],
+    'Average Reading Score': [avg_reading_score],
+    '% Passing Math': [perc_pass_math],
+    '% Passing Reading': [perc_pass_reading],
+    '% Overall Passing': [perc_pass_both]
+})

@@ -1,0 +1,58 @@
+Highest-Performing Schools (by % Overall Passing)
+
+
+
+Lowest-Performing Schools (by % Overall Passing)
+
+# Sort by % Overall Passing in ascending order and display the top 5 rows
+bottom_schools = by_school_df.sort_values('% Overall Passing').head(5)
+
+
+Maths Scores by Year
+
+# Group by school and grade, and calculate mean maths score
+maths_by_year_df = students_df.groupby(['school_name', 'grade'])['maths_score'].mean().unstack()
+
+# Reorder columns to display grades in ascending order
+maths_by_year_df = maths_by_year_df[['9th', '10th', '11th', '12th']]
+
+
+
+Reading Scores by Year
+
+# Group by school and grade, and calculate mean reading score
+reading_by_year_df = students_df.groupby(['school_name', 'grade'])['reading_score'].mean().unstack()
+
+# Reorder columns to display grades in ascending order
+reading_by_year_df = reading_by_year_df[['9th', '10th', '11th', '12th']]
+
+
+Scores by School Spending
+
+# Create bins for school spending
+bins = [0, 584, 629, 644, 675]
+
+# Create labels for the bins
+labels = ['<$584', '$585-629', '$630-644', '$645-675']
+
+# Cut the per-student budget into the spending ranges
+schools_df['Spending Ranges (Per Student)'] = pd.cut(schools_df['budget']/schools_df['size'], bins=bins, labels=labels)
+
+# Merge the two data frames
+merged_df = pd.merge(schools_df, students_df, how='left', on='school_name')
+
+# Group by spending range and calculate mean scores
+spending_summary = merged_df.groupby('Spending Ranges (Per Student)')[['math_score', 'reading_score', '% Passing Math', '% Passing Reading', '% Overall Passing']].mean()
+
+
+Scores by School Size
+
+
+# Create bins for school size
+bins = [0, 999, 1999, 5000]
+
+# Create labels for the bins
+labels =
+
+
+Scores by School Type

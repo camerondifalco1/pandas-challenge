@@ -1,0 +1,9 @@
+Import
+
+import pandas as pd
+
+# Load the schools_complete file into a data frame
+schools_df = pd.read_csv('C:/Users/CDiFa/OneDrive/Uni - Data Analytics/Module 4/Attempt 3/PyCitySchools/Resources/schools_complete.csv')
+
+# Load the students_complete file into a data frame
+students_df = pd.read_csv('C:/Users/CDiFa/OneDrive/Uni - Data Analytics/Module 4/Attempt 3/PyCitySchools/Resources/students_complete.csv')

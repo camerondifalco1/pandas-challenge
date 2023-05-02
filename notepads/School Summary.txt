@@ -1,0 +1,40 @@
+School Summary
+
+# Calculate the school type
+per_school_types = schools_df.set_index(['school_name'])['type']
+
+# Calculate the total student count
+per_school_counts = students_df['school_name'].value_counts()
+
+# Calculate the per capita spending
+per_school_budget = schools_df.set_index(['school_name'])['budget']
+per_school_capita = per_school_budget / per_school_counts
+
+# Calculate the average test scores
+per_school_math = students_df.groupby(['school_name'])['math_score'].mean()
+per_school_reading = students_df.groupby(['school_name'])['reading_score'].mean()
+
+# Calculate the number of schools with maths scores of 50 or higher
+passing_math = students_df[students_df['math_score'] >= 50]
+per_school_passing_math = passing_math.groupby(['school_name'])['Student ID'].count() / per_school_counts * 100
+
+# Calculate the number of schools with reading scores of 50 or higher
+passing_reading = students_df[students_df['reading_score'] >= 50]
+per_school_passing_reading = passing_reading.groupby(['school_name'])['Student ID'].count() / per_school_counts * 100
+
+# Calculate the schools that passed both maths and reading with scores of 50 or higher
+overall_passing = students_df[(students_df['math_score'] >= 50) & (students_df['reading_score'] >= 50)]
+per_school_passing_overall = overall_passing.groupby(['school_name'])['Student ID'].count() / per_school_counts * 100
+
+# Create a new dataframe for the above calculations
+per_school_summary = pd.DataFrame({
+    'School Type': per_school_types,
+    'Total Students': per_school_counts,
+    'Total School Budget': per_school_budget,
+    'Per Student Budget': per_school_capita,
+    'Average Math Score': per_school_math,
+    'Average Reading Score': per_school_reading,
+    '% Passing Math': per_school_passing_math,
+    '% Passing Reading': per_school_passing_reading,
+    '% Overall Passing': per_school_passing_overall
+})
