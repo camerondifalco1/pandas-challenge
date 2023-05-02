@@ -1,0 +1,21 @@
+Summarises the analysis (5 points)
+
+Your chance of scoring higher and passing is with an independent school.  3 of the top 5 schools are independent where as 3 of the bottom 5 were government schools. 
+
+The difference between the best independent school and the worst government school is 15%.
+
+Attending Griffin High School is the best school in our data set with the highest overall passing percentage with 81%. They hold the highest score for reading and 3rd highest in math scores. 
+2.
+
+
+Spending more money doesnt correlate to recieving a higher score in maths or reading. The best value for education in relation to scores vs dollars spend is the $585-630 range. This cateogry scored higher in ever category.
+
+Small schools where under 1000 students attend is the best chance to schore well in maths and reading. attending one of these schools will increase your chances of passing by 1% vs Medium and 9% vs Large schools. 
+
+
+
+Draws two correct conclusions or comparisons from the calculations
+Spending more money doesnt correlate to recieving a higher score in maths or reading. The best value for education in relation to scores vs dollars spend is the $585-630 range. This cateogry scored higher in ever category.
+
+Small schools where under 1000 students attend is the best chance to schore well in maths and reading. attending one of these schools will increase your chances of passing by 1% vs Medium and 9% vs Large schools. 
+
