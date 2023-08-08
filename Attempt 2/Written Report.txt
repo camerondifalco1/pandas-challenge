@@ -1,0 +1,24 @@
+Summarises the analysis (5 points)
+
+The Data set we are looking at today is from 15 schools with over 39,000 students, Average Maths and Reading scores are 70.3 and 70.0 respectivaly.
+
+School Size had a direct impact on a students ability to finish with higher grades. This is correlated 
+
+Your chance of scoring higher and passing is with an independent school.
+
+The difference between the best independent school and the worst government school is 15%.
+
+Attending Griffin High School is the best school in our data set with the highest overall passing percentage with 81%. They hold the highest score for reading and 3rd highest in math scores. 
+2.
+
+Spending more money doesnt correlate to recieving a higher score in maths or reading. The best value for education in relation to scores vs dollars spend is the $585-630 range. This cateogry scored higher in ever category.
+
+Small schools where under 1000 students attend is the best chance to schore well in maths and reading. attending one of these schools will increase your chances of passing by 1% vs Medium and 9% vs Large schools. 
+
+
+
+Draws two correct conclusions or comparisons from the calculations
+Spending more money doesnt correlate to recieving a higher score in maths or reading. The best value for education in relation to scores vs dollars spend is the $585-630 range. This cateogry scored higher in ever category.
+
+Small schools where under 1000 students attend is the best chance to schore well in maths and reading. attending one of these schools will increase your chances of passing by 1% vs Medium and 9% vs Large schools. 
+
